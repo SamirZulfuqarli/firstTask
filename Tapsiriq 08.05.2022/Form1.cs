@@ -21,9 +21,9 @@ namespace Tapsiriq_08._05._2022
         {
             int x = Convert.ToInt32(textBox1.Text);
             string cav = " ";
-            if (x / 4 > 0 && x / 6 > 0)
+            if (x % 4 == 0 && x % 6 == 0)
             {
-                cav = "Bolunur";
+                cav = "Bolundu ugurlu emeliyyat";
             }
             else
             {
@@ -42,7 +42,7 @@ namespace Tapsiriq_08._05._2022
         {
             int x = Convert.ToInt32(textBox2.Text);
             string cav = " ";
-            if (x <= 50)
+            if (x >= 0 && x <= 50)
                 cav = "F";
             else if (x >= 51 && x <= 60)
                 cav = "E";
@@ -99,13 +99,13 @@ namespace Tapsiriq_08._05._2022
             }
             else if (x >= 501 && x <= 700)
             {
-               cavab = (x - x * 15 / 100).ToString();
+                cavab = (x - x * 15 / 100).ToString();
 
             }
             else
                 cavab = "Bele sert qeyd olunmayib";
 
-            label4.Text = cavab;    
+            label4.Text = cavab;
 
 
 
